@@ -1,0 +1,58 @@
+{
+    "name": "• ArrayCore •",
+    "description": "A Simple Telegram Voice Call Bot",
+    "logo": "https://telegra.ph/file/b918befe58de65045878c.jpg",
+    "keywords": [
+        "Telegram",
+        "VCBot",
+        "MusicPlayer"
+    ],
+    "repository": "https://github.com/Desinobita/TgVcUsers",
+    "env": {
+        "SESSION": {
+            "description": "Pyrogram String Session.",
+            "required": true
+        },
+        "API_ID": {
+            "description": "my.telegram.org",
+            "required": true
+        },
+        "ALIVE_PIC": {
+            "description": "Pyrogram String Session",
+            "required": false
+        },
+        "API_HASH": {
+            "description": "my.telegram.org",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "Handler | Default (!)",
+            "value": "!",
+            "required": false 
+        },
+        "GROUP_MODE": {
+            "description": "Anyone can play, if set to True. Set it to False to restrict play access to Sudo Users/Contacts only",
+            "value": "True",
+            "required": true 
+        },
+        "BOT_TOKEN": {
+            "description": "Required To Give Commands In Bot Pm",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "USER ID OF THOSE PEOPLE WHO CAN CONTROL THE BOT",
+            "required": true 
+        }
+    },
+    "buildpacks": [{
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+      },{
+        "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+      },{
+        "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+      },{
+        "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+      },{
+        "url": "heroku/python"
+      }]
+}
